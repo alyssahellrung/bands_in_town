@@ -2,4 +2,4 @@
 
 ## Reviewing a boot camp exercise for practice with server side APIs and debugging.
 
-Will style and add more information soon!
+Will style and add event information soon!

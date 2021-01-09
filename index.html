@@ -44,16 +44,18 @@
     // The artists thumbnail image
     var artistThumbnail = $("<img>").attr("src", response.thumb_url);
     // The number of fans tracking this artist
-    var tracker = $("<h2>").text(response.tracker_count + " fans are trackng this artist.");
+    var tracker = $("<h2>").text(response.tracker_count + " fans are tracking this artist.");
     // The number of upcoming events for this artist
     var upcoming = $("<h2>").text(response.upcoming_event_count + " events coming up.");
-    
     // A link to the bandsintown url for this artist
-    var artistURL = $("<a>").attr("href", response.url).append(artistName)
-    // Note: Append actual HTML elements, not just text
+    var artistURL = $("<a>").attr("href", response.url).append(artistName);
+    // A link to the artist's facebook page
+    var facebook = $("<a>").attr("href", response.facebook_page_url).append(response.name + "'s Facebook page");
+    // A larger image of the artist
+    // var artistImage = $("<img>").attr("src", response.image_url);
 
     $("#artist-div").empty();
-    $("#artist-div").append(artistURL, artistThumbnail, tracker, upcoming);
+    $("#artist-div").append(artistURL, artistThumbnail, tracker, upcoming, facebook);
   });
   }
   
